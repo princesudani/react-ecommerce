@@ -1,5 +1,7 @@
 import React from "react";
 import HeroSection from "./components/HeroSection";
+import Services from "./components/Services";
+import Trusted from "./components/Trusted";
 // import styled from "styled-components";
 
 const Home = () => {
@@ -7,7 +9,11 @@ const Home = () => {
     name: "MY POPSHOP",
   };
 
-  return <HeroSection mydata={data} />;
+  return <>
+    <HeroSection mydata={data} />
+    <Services/>
+    <Trusted/>
+  </>;
 };
 
 // const Wrapper = styled.section`
