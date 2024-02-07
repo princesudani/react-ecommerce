@@ -7,7 +7,7 @@ import FetureProduct from "./components/FetureProduct";
 
 const Home = () => {
   const data = {
-    name: "MY POPSHOP",
+    name: "My EasyShoppe",
   };
 
   return (

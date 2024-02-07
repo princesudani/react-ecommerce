@@ -24,7 +24,7 @@ const Footer = () => {
       <footer>
         <div className="container grid grid-four-column">
           <div className="footer-about">
-            <h3>POPSHOP</h3>
+            <h3>EasyShoppe</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
           </div>
 
@@ -39,13 +39,32 @@ const Footer = () => {
             <h3>Follow us</h3>
             <div className="footer-social--icons">
               <div>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><FaLinkedin className="icons" /></a>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin className="icons" />
+                </a>
               </div>
               <div>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FaInstagramSquare className="icons" /></a>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagramSquare className="icons" />
+                </a>
               </div>
               <div>
-              <a href="https://web.telegram.org/" target="_blank" rel="noopener noreferrer"> <FaTelegram className="icons" /></a>
+                <a
+                  href="https://web.telegram.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  <FaTelegram className="icons" />
+                </a>
               </div>
             </div>
           </div>
@@ -61,7 +80,7 @@ const Footer = () => {
         <div className="footer-bottom--section">
           <hr />
           <div className="container grid grid-two-column">
-            <p>@ {new Date().getFullYear()} POPSHOP. All Rights Reserved</p>
+            <p>@ {new Date().getFullYear()} EasyShoppe. All Rights Reserved</p>
             <div>
               <p>PRIVACY POLICY</p>
               <p>TERMS & CONDITIONS</p>
