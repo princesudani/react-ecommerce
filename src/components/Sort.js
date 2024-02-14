@@ -27,7 +27,7 @@ const Sort = () => {
       </div>
       {/* 2nd columns */}
       <div className="product-data">
-        <p>{`${filter_products.length} Availabel Products`}</p>
+        <p>{`${filter_products.length} Available Products`}</p>
       </div>
       {/* 3rd column  */}
       <div className="sort-selection">

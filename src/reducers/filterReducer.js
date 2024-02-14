@@ -28,28 +28,6 @@ const filterReducer = (state, action) => {
         sorting_value: sort_value,
       };
 
-    // case "SORTING_PRODUCTS":
-    //   let nweSortData;
-    //   let tempSortProduct = [...action.payload];
-
-    //   if(state.sorting_value == "a-z")
-
-    //   if (state.sorting_value == "a-z") {
-    //     nweSortData = tempSortProduct.sort((a, b) => {
-    //       return a.name.localeCompare(b.name);
-    //     });
-    //   }
-    //   if (state.sorting_value == "z-a") {
-    //     nweSortData = tempSortProduct.sort((a, b) => {
-    //       return b.name.localeCompare(a.name);
-    //     });
-    //   }
-
-    //   return {
-    //     ...state,
-    //     filter_products: nweSortData,
-    //   };
-
     case "SORTING_PRODUCTS":
       let newSortData;
 
@@ -96,12 +74,24 @@ const filterReducer = (state, action) => {
       let { all_products } = state;
       let tempFilterProduct = [...all_products];
 
-      const { text } = state.filters;
+      const { text, category, company } = state.filters;
 
       if (text) {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
           return curElem.name.toLowerCase().includes(text);
         });
+      }
+
+      if (category !== "all") {
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.category === category
+        );
+      }
+
+      if (company !== "all") {
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.company.toLowerCase() === company.toLowerCase()
+        );
       }
 
       return {
