@@ -3,7 +3,7 @@ const filterReducer = (state, action) => {
     case "LOAD_FILTER_PRODUCTS":
       let priceArr = action.payload.map((curElem) => curElem.price);
       let maxPrice = Math.max(...priceArr);
-      console.log(maxPrice);
+      // console.log(maxPrice);
 
       return {
         ...state,
@@ -27,7 +27,7 @@ const filterReducer = (state, action) => {
     case "GET_SORT_VALUE":
       let userSortValue = document.getElementById("sort");
       let sort_value = userSortValue.options[userSortValue.selectedIndex].value;
-      console.log(sort_value);
+      // console.log(sort_value);
       return {
         ...state,
         sorting_value: sort_value,
