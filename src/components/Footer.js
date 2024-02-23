@@ -3,8 +3,10 @@ import styled from "styled-components";
 import { Button } from "../styles/Button";
 import { NavLink } from "react-router-dom";
 import { FaLinkedin, FaInstagramSquare, FaTelegram } from "react-icons/fa";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Footer = () => {
+  const { user, isAuthenticated } = useAuth0();
   return (
     <Wrapper>
       <section className="contact-short">
@@ -31,7 +33,7 @@ const Footer = () => {
           <div className="footer-subscribe">
             <h3>Subscribe to Get Important Updates</h3>
             <form action="#">
-              <input type="email" placeholder="Enter Email" />
+              <input type="email" placeholder="Enter Email" value={isAuthenticated ? user.email : ""}/>
               <input type="submit" value="SUBSCRIBE" />
             </form>
           </div>
