@@ -3,8 +3,10 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FaCartArrowDown } from "react-icons/fa";
 import { IoMenu, IoClose } from "react-icons/io5";
+import { useCartContext } from "../context/cart_context";
 
 const Nav = () => {
+  const { total_item } = useCartContext();
   const [menuIcon, setMenuIcon] = useState();
 
   const Nav = styled.nav`
@@ -190,7 +192,7 @@ const Nav = () => {
           <li>
             <NavLink to="/cart" className="navbar-link cart-trolley--link">
               <FaCartArrowDown className="cart-trolley" />
-              <span className="cart-total--item">10</span>
+              <span className="cart-total--item">{total_item}</span>
             </NavLink>
           </li>
         </ul>
